@@ -41,7 +41,7 @@
     <section class="blog-area ptb-80">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6" v-for="allNews of allNewses" :key="allNews.id">
+          <div class="col-lg-4 col-md-6" v-for="allNews of pageOfItems" :key="allNews.id">
             <div class="single-blog-post">
               <div class="blog-image">
                 <a href="#">
@@ -49,7 +49,8 @@
                 </a>
 
                 <div class="date">
-                  <feather type="calendar"></feather>{{ moment(allNews.publishDate).format('Do-MMM-YYYY')  }}
+                  <feather type="calendar"></feather>
+                  {{ moment(allNews.publishDate).format('Do-MMM-YYYY') }}
                 </div>
               </div>
 
@@ -60,7 +61,7 @@
 
                 <span>
                   by
-                  <a href="#">{{ allNews.published_by  }}</a>
+                  <a href="#">{{ allNews.published_by }}</a>
                 </span>
 
                 <p>{{ allNews.description.substring(0,200)+"..." }}</p>
@@ -76,23 +77,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="pagination-area">
               <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item">
-                    <a class="page-link" href="#">Prev</a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
+                <jw-pagination :items="allNewses" @changePage="onChangePage"></jw-pagination>
               </nav>
             </div>
           </div>
@@ -103,30 +88,38 @@
   </div>
 </template>
 <script>
+const exampleItems = [...Array(150).keys()].map((i) => ({
+  id: i + 1,
+  name: "Item " + (i + 1),
+}));
 import axios from "axios";
 export default {
   name: "BlogGrid",
   data() {
     return {
-      errors:[],
+      errors: [],
       allNewses: [],
-	  
+      exampleItems,
+      pageOfItems: [],
     };
   },
-  
-  mounted (){
-	axios
-      .get('api/v1/news/all')
-      .then(response => {
-        this.allNewses = response.data.data
-		
+
+  mounted() {
+    axios
+      .get("api/v1/news/all")
+      .then((response) => {
+        this.allNewses = response.data.data;
       })
-      .catch(error => {
-        this.errors.push(error)
-      })
-	
+      .catch((error) => {
+        this.errors.push(error);
+      });
   },
-  
-  
+
+  methods: {
+    onChangePage(allNewses) {
+      console.log(allNewses);
+      this.pageOfItems = allNewses;
+    },
+  },
 };
 </script>

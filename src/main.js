@@ -13,7 +13,8 @@ import axios from "axios";
 import moment from 'moment'
 
 
-
+import JwPagination from 'jw-vue-pagination';
+Vue.component('jw-pagination', JwPagination);
 
 
 Vue.prototype.moment = moment
