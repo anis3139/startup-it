@@ -41,7 +41,7 @@
     <section class="blog-area ptb-80">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6" v-for="allNews of pageOfItems" :key="allNews.id">
+          <div class="col-lg-4 col-md-6" v-for="allNews of allNewses" :key="allNews.id">
             <div class="single-blog-post">
               <div class="blog-image">
                 <a href="#">
@@ -77,7 +77,7 @@
           <div class="col-lg-12 col-md-12">
             <div class="pagination-area">
               <nav aria-label="Page navigation">
-                <jw-pagination :items="allNewses" @changePage="onChangePage"></jw-pagination>
+                <jw-pagination :items="pageOfItems" @changePage="onChangePage" :pageSize="9"></jw-pagination>
               </nav>
             </div>
           </div>
@@ -88,10 +88,6 @@
   </div>
 </template>
 <script>
-const exampleItems = [...Array(150).keys()].map((i) => ({
-  id: i + 1,
-  name: "Item " + (i + 1),
-}));
 import axios from "axios";
 export default {
   name: "BlogGrid",
@@ -99,7 +95,6 @@ export default {
     return {
       errors: [],
       allNewses: [],
-      exampleItems,
       pageOfItems: [],
     };
   },
@@ -108,7 +103,7 @@ export default {
     axios
       .get("api/v1/news/all")
       .then((response) => {
-        this.allNewses = response.data.data;
+        this.pageOfItems = response.data.data;
       })
       .catch((error) => {
         this.errors.push(error);
@@ -116,9 +111,9 @@ export default {
   },
 
   methods: {
-    onChangePage(allNewses) {
-      console.log(allNewses);
-      this.pageOfItems = allNewses;
+    onChangePage(pageOfItems) {
+      console.log(pageOfItems);
+      this.allNewses = pageOfItems;
     },
   },
 };
