@@ -349,7 +349,7 @@
                 </form>
               </section>
 
-              <section class="widget widget_startp_posts_thumb">
+              <!-- <section class="widget widget_startp_posts_thumb">
                 <h3 class="widget-title">Latest Posts</h3>
 
                 <article class="item" v-for="news of newsAll" :key="news.id">
@@ -375,14 +375,17 @@
                
 
                 
-              </section>
+              </section> -->
 
               <section class="widget widget_categories">
                 <h3 class="widget-title">Categories</h3>
 
                 <ul>
                   <li v-for="cat of cats" :key="cat.id">
-                    <a href="#">{{ cat.nameBn }}</a>
+                    <router-link :to="{
+                      name: 'BlogCat',
+                      params: { id: cat.id },
+                    }">{{ cat.nameBn }}</router-link>
                   </li>
                   
                 </ul>

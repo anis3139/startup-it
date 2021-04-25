@@ -20,6 +20,7 @@ import Faq from './components/other-pages/faq/Faq';
 import NotFound from './components/other-pages/not-found/NotFound';
 import ComingSoon from './components/other-pages/coming-soon/ComingSoon';
 import BlogGrid from './components/other-pages/blog/BlogGrid';
+import BlogCat from './components/other-pages/blog/BlogCat';
 import BlogDetails from './components/other-pages/blog/BlogDetails';
 import Contact from './components/other-pages/contact/Contact';
 import Shop from './components/other-pages/product/Shop';
@@ -56,6 +57,7 @@ export const router = new VueRouter({
       { path: '/not-found', component: NotFound },
       { path: '/blog-grid', component: BlogGrid },
       { path: '/blog-details/:id', name: 'blog-details', component: BlogDetails },
+      { path: '/category/:id', name: 'BlogCat', component: BlogCat },
       { path: '/contact', component: Contact },
       { path: '/shop', component: Shop },
       { path: '/cart', component: Cart },
