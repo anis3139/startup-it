@@ -55,7 +55,7 @@ export const router = new VueRouter({
       { path: '/coming-soon', component: ComingSoon },
       { path: '/not-found', component: NotFound },
       { path: '/blog-grid', component: BlogGrid },
-      { path: '/blog-details', component: BlogDetails },
+      { path: '/blog-details/:id', name: 'blog-details', component: BlogDetails },
       { path: '/contact', component: Contact },
       { path: '/shop', component: Shop },
       { path: '/cart', component: Cart },

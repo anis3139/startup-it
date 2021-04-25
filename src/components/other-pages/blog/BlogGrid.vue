@@ -5,7 +5,7 @@
       <div class="d-table">
         <div class="d-table-cell">
           <div class="container">
-            <h2>Blog Grid</h2>
+            <h2>Blog</h2>
           </div>
         </div>
       </div>
@@ -44,9 +44,14 @@
           <div class="col-lg-4 col-md-6" v-for="allNews of allNewses" :key="allNews.id">
             <div class="single-blog-post">
               <div class="blog-image">
-                <a href="#">
+                <router-link
+                  :to="{
+                      name: 'blog-details',
+                      params: { id: allNews.id },
+                    }"
+                >
                   <img :src=" allNews.image" alt="image" />
-                </a>
+                </router-link>
 
                 <div class="date">
                   <feather type="calendar"></feather>
@@ -56,7 +61,12 @@
 
               <div class="blog-post-content">
                 <h3>
-                  <a href="#">{{ allNews.title }}</a>
+                  <router-link
+                    :to="{
+                      name: 'blog-details',
+                      params: { id: allNews.id },
+                    }"
+                  >{{ allNews.title }}</router-link>
                 </h3>
 
                 <span>
@@ -65,11 +75,16 @@
                 </span>
 
                 <p>{{ allNews.description.substring(0,200)+"..." }}</p>
-
-                <a href="#" class="read-more-btn">
-                  Read More
-                  <feather type="arrow-right"></feather>
-                </a>
+                <router-link class="read-more-btn"
+                  :to="{
+                      name: 'blog-details',
+                      params: { id: allNews.id },
+                    }"
+                >
+                   Read More
+                    <feather type="arrow-right"></feather>
+                </router-link>
+                
               </div>
             </div>
           </div>
@@ -112,7 +127,6 @@ export default {
 
   methods: {
     onChangePage(pageOfItems) {
-      console.log(pageOfItems);
       this.allNewses = pageOfItems;
     },
   },
