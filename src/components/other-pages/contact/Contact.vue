@@ -36,7 +36,7 @@
       </div>
     </div>
     <!-- End Page Title -->
- <div class="container">
+    <div class="container">
       <div class="faq-accordion">
         <VueFaqAccordion :items="myItems" />
       </div>
@@ -66,7 +66,7 @@
                 <feather type="map-pin"></feather>
               </div>
               <h3>Visit Here</h3>
-              <p>House# 411,  Flat# 3B,  Road# 29,  New DOHS Mohakhali, Dhaka </p>
+              <p>House# 411, Flat# 3B, Road# 29, New DOHS Mohakhali, Dhaka</p>
             </div>
           </div>
 
@@ -77,7 +77,7 @@
               </div>
               <h3>Call Here</h3>
               <p>
-                <a href="tel:+8809696863000">+8809696863000 </a>
+                <a href="tel:+8809696863000">+8809696863000</a>
               </p>
               <p>
                 <a href="tel:+8801774444000">+8801774444000</a>
@@ -88,8 +88,6 @@
       </div>
     </section>
     <!-- End Contact Info Area -->
-
-   
 
     <!-- Start Contact Area -->
     <section class="contact-area ptb-80 pt-0 mt-5">
@@ -106,13 +104,14 @@
           </div>
 
           <div class="col-lg-6 col-md-12">
-            <form id="contactForm">
+            <form id="contactForm" @submit.prevent="contactSubmit">
               <div class="row">
                 <div class="col-lg-12 col-md-12">
                   <div class="form-group">
                     <input
                       type="text"
                       name="name"
+                      v-model="name"
                       id="name"
                       class="form-control"
                       required
@@ -128,6 +127,7 @@
                     <input
                       type="email"
                       name="email"
+                      v-model="email"
                       id="email"
                       class="form-control"
                       required
@@ -143,6 +143,7 @@
                     <input
                       type="text"
                       name="phone_number"
+                      v-model="phone_number"
                       id="phone_number"
                       required
                       data-error="Please enter your number"
@@ -158,6 +159,7 @@
                     <input
                       type="text"
                       name="msg_subject"
+                      v-model="msg_subject"
                       id="msg_subject"
                       class="form-control"
                       required
@@ -174,6 +176,7 @@
                       name="message"
                       class="form-control"
                       id="message"
+                      v-model="message"
                       cols="30"
                       rows="5"
                       required
@@ -201,6 +204,8 @@
 
 <script>
 import VueFaqAccordion from "vue-faq-accordion";
+import axios from "axios";
+
 export default {
   name: "Contact",
   components: {
@@ -221,23 +226,64 @@ export default {
             "আপনাকে প্রতি মাসে সফটওয়্যারটি ব্যবহারের জন্য 250 টাকা সার্ভিস চার্জ প্রদান করতে হবে। আমাদের মাসিক প্যাকেজ টি 30 দিনের জন্য হয় ।",
         },
         {
-          title: "আমি কি মাসিক ছাড়া আরো বেশি সময়ের জন্য  কোন প্যাকেজ কিনতে পারব ?",
-          value: "আপনি মাসিক প্যাকেজ টি বাদ দিয়েও আমাদের অর্ধবার্ষিক বা বাৎসরিক প্যাকেজটি নিয়ে দেখতে পারেন আমাদের অর্ধবার্ষিক প্যাকেজটি 180 দিনের হয়, যার মূল্য 1200 টাকা এবং বাৎসরিক প্যাকেজটি 365 দিনের হয়, যার মূল্য 2000 টাকা।",
+          title:
+            "আমি কি মাসিক ছাড়া আরো বেশি সময়ের জন্য  কোন প্যাকেজ কিনতে পারব ?",
+          value:
+            "আপনি মাসিক প্যাকেজ টি বাদ দিয়েও আমাদের অর্ধবার্ষিক বা বাৎসরিক প্যাকেজটি নিয়ে দেখতে পারেন আমাদের অর্ধবার্ষিক প্যাকেজটি 180 দিনের হয়, যার মূল্য 1200 টাকা এবং বাৎসরিক প্যাকেজটি 365 দিনের হয়, যার মূল্য 2000 টাকা।",
         },
         {
           title: "আমি কি ট্রায়াল নিয়ে দেখতে পারি ?",
-          value: "অবশ্যই আপনি ট্রায়াল নিয়ে দেখতে পারেন। ট্রায়াল ব্যবহার করতে প্রমোশনাল কোড ব্যবহার করুন trial । এই কোডটি ব্যবহার করলে আপনি তিন দিন ট্রায়াল হিসাবে আমার ক্লায়েন্ট ব্যবহার করতে পারবেন।",
+          value:
+            "অবশ্যই আপনি ট্রায়াল নিয়ে দেখতে পারেন। ট্রায়াল ব্যবহার করতে প্রমোশনাল কোড ব্যবহার করুন trial । এই কোডটি ব্যবহার করলে আপনি তিন দিন ট্রায়াল হিসাবে আমার ক্লায়েন্ট ব্যবহার করতে পারবেন।",
         },
         {
-          title: "আমি কি প্রিন্টার ব্যবহার করে কাস্টমারদের কে ইনভয়েস অথবা বিল দিতে পারি ?",
-          value: "অবশ্যই আপনার যদি প্রিন্টার থাকে তবে খুব সহজেই আমার ক্লাইন্ট এর মাধ্যমে ইনভয়েস অথবা বিল প্রিন্ট করে কাস্টমারদের কে প্রদান করতে পারবেন। ",
+          title:
+            "আমি কি প্রিন্টার ব্যবহার করে কাস্টমারদের কে ইনভয়েস অথবা বিল দিতে পারি ?",
+          value:
+            "অবশ্যই আপনার যদি প্রিন্টার থাকে তবে খুব সহজেই আমার ক্লাইন্ট এর মাধ্যমে ইনভয়েস অথবা বিল প্রিন্ট করে কাস্টমারদের কে প্রদান করতে পারবেন। ",
         },
         {
-          title: "আমি যদি সফটওয়্যারটি ব্যবহার করতে গিয়ে কোন সমস্যায় পড়ি তাহলে কিভাবে সমাধান করতে পারি ?",
-          value: "আপনি যদি আমার ক্লায়েন্ট ব্যবহার করতে গিয়ে কোন সমস্যায় পড়েন তবে আমাদের সাথে ইমেইলের মাধ্যমে অথবা সরাসরি ফোন করে কাস্টমার কেয়ার এক্সিকিউটিভ এর মাধ্যমে খুব সহজে সমস্যাটির সমাধান করতে পারেন।",
+          title:
+            "আমি যদি সফটওয়্যারটি ব্যবহার করতে গিয়ে কোন সমস্যায় পড়ি তাহলে কিভাবে সমাধান করতে পারি ?",
+          value:
+            "আপনি যদি আমার ক্লায়েন্ট ব্যবহার করতে গিয়ে কোন সমস্যায় পড়েন তবে আমাদের সাথে ইমেইলের মাধ্যমে অথবা সরাসরি ফোন করে কাস্টমার কেয়ার এক্সিকিউটিভ এর মাধ্যমে খুব সহজে সমস্যাটির সমাধান করতে পারেন।",
         },
       ],
+      errors: [],
+      name: "",
+      email: "",
+      phone_number: "",
+      msg_subject: "",
+      message: "",
     };
+  },
+  methods: {
+    contactSubmit: function (event) {
+      let data = {
+        name: this.name,
+        email: this.email,
+        phone_number: this.phone_number,
+        msg_subject: this.msg_subject,
+        message: this.message,
+      };
+
+      axios
+        .post("api/v1/contact", data)
+        .then(function (res) {
+          console.log(res.data);
+          alert("Massage Send Successfully");
+        })
+        .catch((error) => {
+          this.errors.push(error);
+          alert("Something Went Wrong");
+        });
+      this.name = " ";
+      this.email = " ";
+      this.phone_number = " ";
+      this.msg_subject = " ";
+      this.message = " ";
+      event.target.reset();
+    },
   },
 };
 </script>

@@ -19,7 +19,7 @@ Vue.component('jw-pagination', JwPagination);
 
 Vue.prototype.moment = moment
 
-axios.defaults.baseURL='http://news.bcats.net/';
+axios.defaults.baseURL='http://127.0.0.1:8000/';
 
 Vue.config.productionTip = false
 
