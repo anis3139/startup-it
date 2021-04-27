@@ -61,23 +61,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12 services-right-image">
-                    <img src="../../../assets/img/services-right-image/book-self.png" class="wow fadeInDown" v-wow data-wow-delay="0.6s" alt="book-self">
-                    <img src="../../../assets/img/services-right-image/box.png" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="box">
-                    <img src="../../../assets/img/services-right-image/chair.png" class="wow fadeInLeft" v-wow data-wow-delay="0.6s" alt="chair">
-                    <img src="../../../assets/img/services-right-image/cloud.png" class="wow zoomIn" v-wow data-wow-delay="0.6s" alt="cloud">
-                    <img src="../../../assets/img/services-right-image/cup.png" class="wow bounceIn" v-wow data-wow-delay="0.6s" alt="cup">
-                    <img src="../../../assets/img/services-right-image/flower-top.png" class="wow fadeInDown" v-wow data-wow-delay="0.6s" alt="flower">
-                    <img src="../../../assets/img/services-right-image/head-phone.png" class="wow zoomIn" v-wow data-wow-delay="0.6s" alt="head-phone">
-                    <img src="../../../assets/img/services-right-image/monitor.png" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="monitor">
-                    <img src="../../../assets/img/services-right-image/mug.png" class="wow rotateIn" v-wow data-wow-delay="0.6s" alt="mug">
-                    <img src="../../../assets/img/services-right-image/table.png" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="table">
-                    <img src="../../../assets/img/services-right-image/tissue.png" class="wow zoomIn" v-wow data-wow-delay="0.6s" alt="tissue">
-                    <img src="../../../assets/img/services-right-image/water-bottle.png" class="wow zoomIn" v-wow data-wow-delay="0.6s" alt="water-bottle">
-                    <img src="../../../assets/img/services-right-image/wifi.png" class="wow fadeInLeft" v-wow data-wow-delay="0.6s" alt="wifi">
-                    <img src="../../../assets/img/services-right-image/cercle-shape.png" class="bg-image rotateme" alt="shape">
-                    
-                    <img src="../../../assets/img/services-right-image/main-pic.png" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="main-pic">
+                <div class="col-lg-6 col-md-12">
+                    <img src="../../../assets/img/home-3.jpg" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="main-pic">
                 </div>
             </div>
         </div>

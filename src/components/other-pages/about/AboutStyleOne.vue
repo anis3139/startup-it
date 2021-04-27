@@ -43,7 +43,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-12">
             <div class="about-image">
-              <img src="../../../assets/img/1.png" alt="image" />
+              <img src="../../../assets/img/about-01.jpg" alt="image" />
             </div>
           </div>
          

@@ -100,7 +100,7 @@
 
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-6 col-md-12">
-            <img src="../../../assets/img/1.png" alt="image" />
+            <img src="../../../assets/img/contact-01.jpg" alt="image" />
           </div>
 
           <div class="col-lg-6 col-md-12">

@@ -5,7 +5,8 @@
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
-                        <h2>Category</h2>
+                        <h2 v-if="pageOfItems.length>0">{{ pageOfItems[0].category.nameBn  }}</h2>
+                        <h2 v-else>No Post Found.....</h2>
                     </div>
                 </div>
 			</div>
@@ -104,6 +105,7 @@ export default {
       .get(`api/v1/news/category/${this.$route.params.id}`)
       .then((response) => {
         this.pageOfItems = response.data.data;
+        console.log( response.data.data);
        
       })
       .catch((error) => {

@@ -349,7 +349,7 @@
                 </form>
               </section>
 
-              <!-- <section class="widget widget_startp_posts_thumb">
+              <section class="widget widget_startp_posts_thumb">
                 <h3 class="widget-title">Latest Posts</h3>
 
                 <article class="item" v-for="news of newsAll" :key="news.id">
@@ -375,14 +375,14 @@
                
 
                 
-              </section> -->
+              </section>
 
               <section class="widget widget_categories">
                 <h3 class="widget-title">Categories</h3>
 
                 <ul>
                   <li v-for="cat of cats" :key="cat.id">
-                    <router-link :to="{
+                    <router-link  :to="{
                       name: 'BlogCat',
                       params: { id: cat.id },
                     }">{{ cat.nameBn }}</router-link>
@@ -477,17 +477,13 @@ export default {
     this.getData();
     this.getCatData();
     this.getTagData();
-    axios
-      .get("api/v1/news/book/recent/all")
-      .then((response) => {
-        this.newsAll = response.data.data;
-        console.log(response.data.data);
-      })
-      .catch((error) => {
-        this.errorsNews.push(error);
-      });
+    this.latestData();
   },
-  
+  watch:{
+    $route(){
+      this.getData();
+    }
+  },
   methods: {
     getData() {
       axios
@@ -527,6 +523,18 @@ export default {
         .catch((error) => {
           this.errorstagAll.push(error);
         });
+    }, 
+    latestData(){
+        axios
+      .get("api/v1/news/book/recent/all")
+      .then((response) => {
+        
+         let data=response.data.data;
+          this.newsAll=data.slice(0,5)
+      })
+      .catch((error) => {
+        this.errorsNews.push(error);
+      });
     }
   },
 };
