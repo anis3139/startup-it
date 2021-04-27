@@ -11,18 +11,13 @@ import { router } from './router';
 import store from './store';
 import axios from "axios";
 import moment from 'moment'
-
-
+import VueClipboard from 'vue-clipboard2'
 import JwPagination from 'jw-vue-pagination';
+
 Vue.component('jw-pagination', JwPagination);
-
-
 Vue.prototype.moment = moment
-
 axios.defaults.baseURL='http://news.bcats.net/';
-
 Vue.config.productionTip = false
-
 Vue.use(BootstrapVue);
 Vue.use(VueFeather);
 Vue.use(VueRouter);
@@ -30,8 +25,7 @@ Vue.use(vWow);
 Vue.use(VueCarousel);
 Vue.use(Toasted)
 Vue.use(axios)
-
-
+Vue.use(VueClipboard)
 
 
 new Vue({

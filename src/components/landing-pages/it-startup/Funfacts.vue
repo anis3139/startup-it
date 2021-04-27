@@ -7,7 +7,14 @@
           কেনার আগে ব্যবহার করে দেখতে চান ?
           ৭ দিনের ফ্রি ট্রায়াল নিতে পাশের কোড টি ব্যবহার করুন
         </h3>
-        <a href="#" class="btn btn-primary">trial</a>
+      
+          <span class="btn btn-primary" id="message"  v-clipboard:copy="message"
+            v-clipboard:success="onCopy"
+            v-clipboard:error="onError">{{message}}</span>
+            <span class="test" v-clipboard:copy="message"
+            v-clipboard:success="onCopy"
+            v-clipboard:error="onError">Click for copy</span>
+       
       </div>
 
       <div class="map-bg">
@@ -29,6 +36,7 @@ export default {
       workers: 70,
       feedback: 8,
       downloaded: 10,
+      message: "trial",
     };
   },
   mounted() {
@@ -46,5 +54,23 @@ export default {
       that.downloaded += 1;
     }, 1000);
   },
+  methods: {
+    onCopy: function (e) {
+      alert("Copy Successfull: " + e.text);
+    },
+    onError: function (e) {
+      alert("Failed to copy the text to the clipboard");
+      console.log(e);
+    },
+  },
 };
 </script>
+
+
+<style scoped>
+.test{
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+</style>
