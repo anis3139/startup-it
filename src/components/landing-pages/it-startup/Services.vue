@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12">
-                    <img src="../../../assets/img/home-3.jpg" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="main-pic">
+                    <img src="../../../assets/img/images/home-3.png" class="wow fadeInUp" v-wow data-wow-delay="0.6s" alt="main-pic">
                 </div>
             </div>
         </div>
