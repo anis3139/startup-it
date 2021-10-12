@@ -36,11 +36,7 @@
       </div>
     </div>
     <!-- End Page Title -->
-    <div class="container">
-      <div class="faq-accordion">
-        <VueFaqAccordion :items="myItems" />
-      </div>
-    </div>
+    
     <!-- Start Contact Info Area -->
     <section class="contact-info-area ptb-80">
       <div class="container">
@@ -203,14 +199,11 @@
 </template>
 
 <script>
-import VueFaqAccordion from "vue-faq-accordion";
 import axios from "axios";
 
 export default {
   name: "Contact",
-  components: {
-    VueFaqAccordion,
-  },
+  
   data() {
     return {
       text: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.`,

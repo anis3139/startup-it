@@ -4,8 +4,7 @@
     <div class="container">
       <div class="contact-cta-box">
         <h3>
-          কেনার আগে ব্যবহার করে দেখতে চান ?
-          ৭ দিনের ফ্রি ট্রায়াল নিতে পাশের কোড টি ব্যবহার করুন
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, ut eos, autem dicta iste earum nostrum .
         </h3>
       
           <span class="btn btn-primary" id="message"  v-clipboard:copy="message"

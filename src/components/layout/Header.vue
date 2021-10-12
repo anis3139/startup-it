@@ -14,36 +14,32 @@
                     <b-collapse class="collapse navbar-collapse mean-menu" id="navbarSupportedContent" is-nav>
                         <ul class="navbar-nav nav ml-auto">
                             <li class="nav-item">
-                               <router-link to="/" class="nav-link">মূলপাতা </router-link>
+                               <router-link to="/" class="nav-link">Home </router-link>
 
                               
                             </li>
 
                             <li class="nav-item">
-                                    <router-link to="/about-style-one" class="nav-link">বিস্তারিত </router-link>
+                                    <router-link to="/about-style-one" class="nav-link">About us </router-link>
                             </li>
 
                            
                             
                             <li class="nav-item">
-                                      <router-link to="/version-log" class="nav-link">ভার্সন লিস্ট </router-link>
+                                      <router-link to="/version-log" class="nav-link">Product </router-link>
                             </li>
                             
 
                             <li class="nav-item">
-                                 <router-link to="/blog-grid" class="nav-link">ব্লগ</router-link>
+                                 <router-link to="/blog-grid" class="nav-link">Blog</router-link>
                             </li>
 
                             <li class="nav-item">
-                                <router-link to="/contact" class="nav-link">যোগাযোগ</router-link>
+                                <router-link to="/contact" class="nav-link">Contact</router-link>
                             </li>
                         </ul>
                     </b-collapse>
 
-                    <div class="others-option">
-                        <a href="#" class="btn btn-primary mr-1">লগ-ইন</a>
-                        <a href="#" class="btn btn-primary">সাইন-আপ</a>
-                    </div>
                 </nav>
             </div> 
         </div>

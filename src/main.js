@@ -16,7 +16,7 @@ import JwPagination from 'jw-vue-pagination';
 
 Vue.component('jw-pagination', JwPagination);
 Vue.prototype.moment = moment
-axios.defaults.baseURL='http://news.bcats.net/';
+axios.defaults.baseURL='http://news.snmleathers.com/';
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
 Vue.use(VueFeather);

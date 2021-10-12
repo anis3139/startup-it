@@ -3,7 +3,6 @@
     <HeaderTwo v-if="currentUrl == '/web-hosting'"></HeaderTwo>
     <HeaderThree v-else-if="currentUrl == '/machine-learning'"></HeaderThree>
     <HeaderFour v-else-if="currentUrl == '/digital-agency'"></HeaderFour>
-    <HeaderFour v-else-if="currentUrl == '/digital-agency'"></HeaderFour>
     <div v-else-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
     <Header v-else></Header>
     

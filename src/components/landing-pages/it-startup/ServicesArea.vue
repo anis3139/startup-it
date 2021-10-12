@@ -10,57 +10,57 @@
 
                 <div class="col-lg-6 col-md-12 services-content">
                     <div class="section-title">
-                        <h2>কর্মী ব্যবস্থাপনা</h2>
+                        <h2>Lorem Ipsum</h2>
                         <div class="bar"></div>
-                        <p>অফিস ছোট হোক বা বড় কর্মী ছাড়া অফিস হয়না। এই কর্মীদের  কাজের হিসাব , উপস্থিতি, ছুটি, বেতন, ভ্রমণ ভাতা , দৈনিক ভাতা, পে স্লিপ সহ বিভিন্ন বিষয় ডিজিটাল ভাবে ম্যানেজ করুন আমাদের এই সফটওয়্যারটির মাধ্যমে। </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, possimus.</p>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="layout"></feather> মিটিং 
+                                <feather type="layout"></feather> Lorem 
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="code"></feather> উপস্থিতি 
+                                <feather type="code"></feather> Lorem 
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="smartphone"></feather> ওয়ার্কশীট 
+                                <feather type="smartphone"></feather> Lorem 
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="code"></feather> ছুটি
+                                <feather type="code"></feather> Lorem
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="smartphone"></feather> বেতন
+                                <feather type="smartphone"></feather> Lorem
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="pen-tool"></feather> ভ্রমণ ও দৈনিক ভাতা
+                                <feather type="pen-tool"></feather> Lorem
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="shopping-cart"></feather> বোনাস
+                                <feather type="shopping-cart"></feather> Lorem
                             </div>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="box">
-                                <feather type="check-circle"></feather> পে স্লিপ
+                                <feather type="check-circle"></feather> Lorem
                             </div>
                         </div>
                     </div>
