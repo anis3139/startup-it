@@ -14,6 +14,8 @@ import moment from 'moment'
 import VueClipboard from 'vue-clipboard2'
 import JwPagination from 'jw-vue-pagination';
 
+
+
 Vue.component('jw-pagination', JwPagination);
 Vue.prototype.moment = moment
 axios.defaults.baseURL='https://news.snmleathers.com/';
@@ -28,8 +30,25 @@ Vue.use(axios)
 Vue.use(VueClipboard)
 
 
+
 new Vue({
   store,
   router,
   render: h => h(App),
 }).$mount('#app')
+
+
+
+
+window.addEventListener('load', () => {
+  registerSW();
+});
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    try {
+      await navigator.serviceWorker.register('./serviceWorker.js');
+    } catch (e) {
+      console.log(`Service Worker registration failed`);
+    }
+  }
+}

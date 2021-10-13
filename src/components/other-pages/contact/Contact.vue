@@ -36,7 +36,7 @@
       </div>
     </div>
     <!-- End Page Title -->
-    
+
     <!-- Start Contact Info Area -->
     <section class="contact-info-area ptb-80">
       <div class="container">
@@ -66,7 +66,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+          <div
+            class="
+              col-lg-4 col-md-6 col-sm-6
+              offset-lg-0 offset-md-3 offset-sm-3
+            "
+          >
             <div class="contact-info-box">
               <div class="icon">
                 <feather type="phone"></feather>
@@ -96,7 +101,10 @@
 
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-6 col-md-12">
-            <img src="../../../assets/img/images/contact png 1-01.png" alt="image" />
+            <img
+              src="../../../assets/img/images/contact png 1-01.png"
+              alt="image"
+            />
           </div>
 
           <div class="col-lg-6 col-md-12">
@@ -107,7 +115,7 @@
                     <input
                       type="text"
                       name="name"
-                      v-model="name"
+                      v-model="form.name"
                       id="name"
                       class="form-control"
                       required
@@ -123,7 +131,7 @@
                     <input
                       type="email"
                       name="email"
-                      v-model="email"
+                      v-model="form.email"
                       id="email"
                       class="form-control"
                       required
@@ -139,7 +147,7 @@
                     <input
                       type="text"
                       name="phone_number"
-                      v-model="phone_number"
+                      v-model="form.phone_number"
                       id="phone_number"
                       required
                       data-error="Please enter your number"
@@ -155,7 +163,7 @@
                     <input
                       type="text"
                       name="msg_subject"
-                      v-model="msg_subject"
+                      v-model="form.msg_subject"
                       id="msg_subject"
                       class="form-control"
                       required
@@ -172,7 +180,7 @@
                       name="message"
                       class="form-control"
                       id="message"
-                      v-model="message"
+                      v-model="form.message"
                       cols="30"
                       rows="5"
                       required
@@ -184,7 +192,9 @@
                 </div>
 
                 <div class="col-lg-12 col-md-12">
-                  <button type="submit" class="btn btn-primary">Send Message</button>
+                  <button type="submit" class="btn btn-primary">
+                    Send Message
+                  </button>
                   <div id="msgSubmit" class="h3 text-center hidden"></div>
                   <div class="clearfix"></div>
                 </div>
@@ -203,78 +213,46 @@ import axios from "axios";
 
 export default {
   name: "Contact",
-  
+
   data() {
     return {
-      text: `Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute.`,
-      myItems: [
-        {
-          title: "আমি কিভাবে শুরু করতে পারি?",
-          value:
-            "আমার ক্লায়েন্ট ব্যবহার করার জন্য আপনাকে অবশ্যই নিবন্ধন করতে হবে নিবন্ধন আপনি মোবাইল অ্যাপ ব্যবহার করে বা ওয়েব সাইট ব্রাউজ করে কম্পিউটারের মাধ্যমে খুব সহজেই করতে পারবেন ।",
-        },
-        {
-          title: "আমাকে প্রতি মাসে কত পেমেন্ট করতে হবে ?",
-          value:
-            "আপনাকে প্রতি মাসে সফটওয়্যারটি ব্যবহারের জন্য 250 টাকা সার্ভিস চার্জ প্রদান করতে হবে। আমাদের মাসিক প্যাকেজ টি 30 দিনের জন্য হয় ।",
-        },
-        {
-          title:
-            "আমি কি মাসিক ছাড়া আরো বেশি সময়ের জন্য  কোন প্যাকেজ কিনতে পারব ?",
-          value:
-            "আপনি মাসিক প্যাকেজ টি বাদ দিয়েও আমাদের অর্ধবার্ষিক বা বাৎসরিক প্যাকেজটি নিয়ে দেখতে পারেন আমাদের অর্ধবার্ষিক প্যাকেজটি 180 দিনের হয়, যার মূল্য 1200 টাকা এবং বাৎসরিক প্যাকেজটি 365 দিনের হয়, যার মূল্য 2000 টাকা।",
-        },
-        {
-          title: "আমি কি ট্রায়াল নিয়ে দেখতে পারি ?",
-          value:
-            "অবশ্যই আপনি ট্রায়াল নিয়ে দেখতে পারেন। ট্রায়াল ব্যবহার করতে প্রমোশনাল কোড ব্যবহার করুন trial । এই কোডটি ব্যবহার করলে আপনি তিন দিন ট্রায়াল হিসাবে আমার ক্লায়েন্ট ব্যবহার করতে পারবেন।",
-        },
-        {
-          title:
-            "আমি কি প্রিন্টার ব্যবহার করে কাস্টমারদের কে ইনভয়েস অথবা বিল দিতে পারি ?",
-          value:
-            "অবশ্যই আপনার যদি প্রিন্টার থাকে তবে খুব সহজেই আমার ক্লাইন্ট এর মাধ্যমে ইনভয়েস অথবা বিল প্রিন্ট করে কাস্টমারদের কে প্রদান করতে পারবেন। ",
-        },
-        {
-          title:
-            "আমি যদি সফটওয়্যারটি ব্যবহার করতে গিয়ে কোন সমস্যায় পড়ি তাহলে কিভাবে সমাধান করতে পারি ?",
-          value:
-            "আপনি যদি আমার ক্লায়েন্ট ব্যবহার করতে গিয়ে কোন সমস্যায় পড়েন তবে আমাদের সাথে ইমেইলের মাধ্যমে অথবা সরাসরি ফোন করে কাস্টমার কেয়ার এক্সিকিউটিভ এর মাধ্যমে খুব সহজে সমস্যাটির সমাধান করতে পারেন।",
-        },
-      ],
       errors: [],
-      name: "",
-      email: "",
-      phone_number: "",
-      msg_subject: "",
-      message: "",
+      form: {
+        name: "",
+        email: "",
+        phone_number: "",
+        msg_subject: "",
+        message: "",
+      },
     };
   },
   methods: {
     contactSubmit: function (event) {
-      let data = {
-        name: this.name,
-        email: this.email,
-        phone_number: this.phone_number,
-        msg_subject: this.msg_subject,
-        message: this.message,
-      };
-
-      axios
-        .post("api/v1/contact", data)
+       axios
+        .post("api/v1/contact", this.form)
         .then(function (res) {
           console.log(res.data);
-          alert("Massage Send Successfully");
+          if(res.status == 201){
+              this.form={};
+          this.$toasted.show("Your Message Send Successfully", {
+            icons: "shopping_cart",
+            theme: "bubble",
+            position: "top-right",
+            duration: 3000,
+          });
+          }
         })
         .catch((error) => {
+          console.log(error);
           this.errors.push(error);
-          alert("Something Went Wrong");
+          this.$toasted.show("Something Went Wrong! Try Again..", {
+            icons: "shopping_cart",
+            theme: "bubble",
+            position: "top-right",
+            duration: 3000,
+          });
         });
-      this.name = " ";
-      this.email = " ";
-      this.phone_number = " ";
-      this.msg_subject = " ";
-      this.message = " ";
+     
       event.target.reset();
     },
   },
