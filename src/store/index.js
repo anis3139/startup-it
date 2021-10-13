@@ -13,49 +13,49 @@ export default new Vuex.Store({
                 id: 1, 
                 name: 'Wood Pencil', 
                 price: 191.00,  
-                image: require('../assets/img/shop-image/1.jpg')
+                image: require('../assets/snmleathers/1.jpeg')
             },
             { 
                 id: 2, 
                 name: 'T-Shirt', 
                 price: 191.00,  
-                image: require('../assets/img/shop-image/2.jpg')
+                image: require('../assets/snmleathers/2.jpeg')
             },
             { 
                 id: 3, 
                 name: 'Casual Shoe', 
                 price: 100.00,  
-                image: require('../assets/img/shop-image/3.jpg')
+                image: require('../assets/snmleathers/3.jpeg')
             },
             { 
                 id: 4, 
                 name: 'Coffee Bag', 
                 price: 150.00,  
-                image: require('../assets/img/shop-image/4.jpg')
+                image: require('../assets/snmleathers/4.jpeg')
             },
             { 
                 id: 5, 
                 name: 'Single Chair', 
                 price: 131.00,  
-                image: require('../assets/img/shop-image/5.jpg')
+                image: require('../assets/snmleathers/5.jpeg')
             },
             { 
                 id: 6, 
                 name: 'Business Card', 
                 price: 35.00,  
-                image: require('../assets/img/shop-image/6.jpg')
+                image: require('../assets/snmleathers/6.jpeg')
             },
             { 
                 id: 7, 
                 name: 'Book Cover', 
                 price: 500.00,  
-                image: require('../assets/img/shop-image/7.jpg')
+                image: require('../assets/snmleathers/7.jpeg')
             },
             { 
                 id: 8, 
                 name: 'Wall Watch', 
                 price: 129.00,  
-                image: require('../assets/img/shop-image/8.jpg')
+                image: require('../assets/snmleathers/8.jpeg')
             },
         ],
         cart: []

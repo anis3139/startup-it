@@ -2,7 +2,7 @@
     <div>
         <div class="single-products">
             <div class="products-image">
-                <img :src="item.image" :alt="item.name">
+                <img :src="item.image" :alt="item.name" width="100%" height="300px">
 
                 <!-- <ul>
                     <li><a href="#" data-toggle="modal" data-target="#productsModalCenter"><feather type="search"></feather></a></li>

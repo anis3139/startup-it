@@ -48,10 +48,10 @@
               </div>
               <h3>Mail Here</h3>
               <p>
-                <a href="#">support@amarclient.com</a>
+                <a href="#">support@abc.com</a>
               </p>
               <p>
-                <a href="#">support@amarclient.com</a>
+                <a href="#">support@abc.com</a>
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@
                 <feather type="map-pin"></feather>
               </div>
               <h3>Visit Here</h3>
-              <p>House# 411, Flat# 3B, Road# 29, New DOHS Mohakhali, Dhaka</p>
+              <p>House# 411, Flat# 3B, Road# 29, Dhaka</p>
             </div>
           </div>
 
@@ -73,10 +73,10 @@
               </div>
               <h3>Call Here</h3>
               <p>
-                <a href="tel:+8809696863000">+8809696863000</a>
+                <a href="tel:+8809696863000">+8809690000</a>
               </p>
               <p>
-                <a href="tel:+8801774444000">+8801774444000</a>
+                <a href="tel:+8801774444000">+88017700000</a>
               </p>
             </div>
           </div>
