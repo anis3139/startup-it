@@ -3,7 +3,7 @@
   <section class="features-area ptb-80 bg-f7fafd">
     <div class="container">
       <div class="section-title">
-        <h2>Lorem Ipsum</h2>
+        <h3>Lorem Ipsum</h3>
         <div class="bar"></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
@@ -17,7 +17,7 @@
             <div class="icon">
               <feather type="settings"></feather>
             </div>
-            <h2>Lorem Ipsum</h2>
+            <h3>Lorem Ipsum</h3>
             <div class="bar"></div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
@@ -32,8 +32,7 @@
               <feather type="mail"></feather>
             </div>
 
-            <h3>অত্যাধুনিক প্রযুক্তি</h3>
-                 <h2>Lorem Ipsum</h2>
+                 <h3>Lorem Ipsum</h3>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit dolorum eius dolorem laboriosam sed.</p>
           </div>
@@ -45,7 +44,7 @@
               <feather type="grid"></feather>
             </div>
 
-                 <h2>Lorem Ipsum</h2>
+                 <h3>Lorem Ipsum</h3>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit dolorum eius dolorem laboriosam sed.</p>
           </div>
@@ -57,7 +56,7 @@
               <feather type="info"></feather>
             </div>
 
-                <h2>Lorem Ipsum</h2>
+                <h3>Lorem Ipsum</h3>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit dolorum eius dolorem laboriosam sed.</p>
           </div>
@@ -69,7 +68,7 @@
               <feather type="bell"></feather>
             </div>
 
-                 <h2>Lorem Ipsum</h2>
+                 <h3>Lorem Ipsum</h3>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit dolorum eius dolorem laboriosam sed.</p>
           </div>
@@ -81,7 +80,7 @@
               <feather type="mouse-pointer"></feather>
             </div>
 
-                 <h2>Lorem Ipsum</h2>
+                 <h3>Lorem Ipsum</h3>
                 <div class="bar"></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione impedit dolorum eius dolorem laboriosam sed.</p>
           </div>

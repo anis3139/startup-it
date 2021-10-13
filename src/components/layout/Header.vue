@@ -26,7 +26,7 @@
                            
                             
                             <li class="nav-item">
-                                      <router-link to="/version-log" class="nav-link">Product </router-link>
+                                      <router-link to="/shop" class="nav-link">Product </router-link>
                             </li>
                             
 

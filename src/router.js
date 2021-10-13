@@ -59,7 +59,7 @@ export const router = new VueRouter({
       { path: '/blog-details/:id', name: 'blog-details', component: BlogDetails },
       { path: '/category/:id', name: 'BlogCat', component: BlogCat },
       { path: '/contact', component: Contact },
-      { path: '/shop', component: Shop },
+      { path: '/shop', component: Shop , name: 'shop',},
       { path: '/cart', component: Cart },
       { path: '/checkout', component: Checkout },
       { path: '/details', component: ItemDetails },

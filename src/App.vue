@@ -5,7 +5,7 @@
     <HeaderFour v-else-if="currentUrl == '/digital-agency'"></HeaderFour>
     <div v-else-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
     <Header v-else></Header>
-    
+    <PreLoader v-if="isLoading" />
     <router-view></router-view>
     <div v-if="currentUrl == '/not-found' || currentUrl == '/coming-soon'"></div>
     <Footer v-else></Footer>
@@ -18,11 +18,11 @@ import HeaderTwo from './components/layout/HeaderTwo';
 import HeaderThree from './components/layout/HeaderThree';
 import HeaderFour from './components/layout/HeaderFour';
 import Footer from './components/layout/Footer';
-
+import PreLoader from './components/layout/PreLoader';
 export default {
   name: 'app',
   components: {
-    Header, HeaderTwo, HeaderThree, HeaderFour, Footer
+    Header, HeaderTwo, HeaderThree, HeaderFour, Footer,PreLoader
   },
 
   data() {

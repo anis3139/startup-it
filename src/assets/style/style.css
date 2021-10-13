@@ -422,13 +422,13 @@ Preloader CSS
   width: 100%;
   height: 100%;
   z-index: 9999999;
-  background: #44ce6f;
+  background: #9e131f;
 }
 
 .preloader .spinner {
   width: 60px;
   height: 60px;
-  background-color: #ffffff;
+  background-color: #2a0dad;
   margin: 0 auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
           animation: sk-rotateplane 1.2s infinite ease-in-out;

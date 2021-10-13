@@ -15,21 +15,21 @@
                 <h3>
                     <router-link to="/details">{{item.name}}</router-link>
                 </h3>
-                <span>${{item.price}}</span>
-                <ul>
+                <!-- <span>${{item.price}}</span> -->
+                <!-- <ul>
                     <li><i class="flaticon-star-1"></i></li>
                     <li><i class="flaticon-star-1"></i></li>
                     <li><i class="flaticon-star-1"></i></li>
                     <li><i class="flaticon-star-1"></i></li>
                     <li><i class="flaticon-star-1"></i></li>
-                </ul>
-                <a 
+                </ul> -->
+                <!-- <a 
                     href="javascript:void(0)" 
                     class="add-to-cart-btn"
                     @click="addToCart(item)"
                 >
                     Add to Cart
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
