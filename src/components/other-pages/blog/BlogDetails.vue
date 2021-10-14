@@ -71,8 +71,8 @@
                   <a href="#" >{{ tags.nameBn }}</a>
                 </div>
               </div>
-
-              <!-- <div class="startp-post-navigation">
+<!-- 
+              <div class="startp-post-navigation">
                 <div class="prev-link-wrapper">
                   <div class="info-prev-link-wrapper">
                     <a href="#">
@@ -93,7 +93,7 @@
 
                 <div class="next-link-wrapper">
                   <div class="info-next-link-wrapper">
-                    <a href="#">
+                    <a href="#" >
                       <span class="next-link-info-wrapper">
                         <span class="next-title">The golden rule of buying a phone as a gift</span>
                         <span class="meta-wrapper">
@@ -108,7 +108,7 @@
                     </a>
                   </div>
                 </div>
-              </div> -->
+              </div>  -->
 
               <!-- <div class="comments-area">
                 <h3 class="comments-title">2 Comments:</h3>
@@ -377,7 +377,7 @@
                 
               </section>
 
-              <section class="widget widget_categories">
+              <section class="widget widget_categories"  v-if="cats.length>0">
                 <h3 class="widget-title">Categories</h3>
 
                 <ul>
@@ -385,13 +385,14 @@
                     <router-link  :to="{
                       name: 'BlogCat',
                       params: { id: cat.id },
-                    }">{{ cat.nameBn }}</router-link>
+                    }">{{ cat.nameBn }} <span class="tag-link-count">({{cat.news}})</span> </router-link>
+                   
                   </li>
                   
                 </ul>
               </section>
-
-              <!-- <section class="widget widget_archive">
+<!-- 
+              <section class="widget widget_archive">
                 <h3 class="widget-title">Archives</h3>
 
                 <ul>
@@ -405,9 +406,9 @@
                     <a href="#">June 2019</a>
                   </li>
                 </ul>
-              </section> -->
-
-              <!-- <section class="widget widget_meta">
+              </section> 
+              
+               <section class="widget widget_meta">
                 <h3 class="widget-title">Meta</h3>
 
                 <ul>
@@ -430,17 +431,16 @@
                     <a href="#">WordPress.org</a>
                   </li>
                 </ul>
-              </section> -->
+              </section>  -->
 
-              <section class="widget widget_tag_cloud">
+              <section class="widget widget_tag_cloud" v-if="tags.length>0">
                 <h3 class="widget-title">Tags</h3>
 
-                <div class="tagcloud">
-                  <a href="#" v-for="allTag of tagAll" :key="allTag.id">
-                    {{ allTag.nameBn }}
-                    <!-- <span class="tag-link-count">(3)</span> -->
+                <div class="tagcloud" >
+                  <a href="#" v-for="tag of tags" :key="tag.id">
+                     {{ tag.nameEn}} 
+                     <!-- <span class="tag-link-count"> <span class="tag-link-count">({{tagsHaveNews}})</span> </span>  -->
                   </a>
-                 
                 </div>
               </section>
             </aside>
@@ -467,16 +467,14 @@ export default {
       description:'',
       publishDateBn:'',
       published_by:'',
-      tags:'',
+      tags:[],
       cats:[],
-      tagAll:[],
       newsAll:[],
     };
   },
   mounted() {
     this.getData();
     this.getCatData();
-    this.getTagData();
     this.latestData();
   },
   watch:{
@@ -484,6 +482,7 @@ export default {
       this.getData();
     }
   },
+ 
   methods: {
     getData() {
       axios
@@ -493,7 +492,7 @@ export default {
           this.image = res.data.data.image;
           this.description = res.data.data.description;
           this.publishDateBn = res.data.data.publishDateBn;
-          this.tags = res.data.data.tag;
+          this.tags = res.data.data.tags;
           this.published_by = res.data.data.published_by;
 
          
@@ -504,7 +503,7 @@ export default {
     },
     getCatData(){
         axios
-        .get('api/v1/category/all')
+        .get('api/v1/category/category-have-news')
         .then((res) => {
             this.cats = res.data.data;
           
@@ -513,17 +512,7 @@ export default {
           this.errorsCat.push(error);
         });
     },
-    getTagData(){
-        axios
-        .get('api/v1/tag/all')
-        .then((res) => {
-            this.tagAll = res.data.data;
-          
-        })
-        .catch((error) => {
-          this.errorstagAll.push(error);
-        });
-    }, 
+   
     latestData(){
         axios
       .get("api/v1/news/book/recent/all")
