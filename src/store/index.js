@@ -112,7 +112,7 @@ export default new Vuex.Store({
                 image: require('../assets/snmleathers/7.jpeg')
             },
             { 
-                id: 18, 
+                id: 19, 
                 name: 'Wall Watch', 
                 price: 129.00,  
                 image: require('../assets/snmleathers/8.jpeg')

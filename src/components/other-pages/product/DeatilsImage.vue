@@ -10,19 +10,19 @@
                 :perPageCustom = "[[0, 1], [768, 1], [1024, 1], [1200, 1], [1500, 1]]"
             >
                 <slide>
-                    <li><img src="../../../assets/img/shop-image/1.jpg" alt="img"></li>
+                    <li><img :src=src alt="img"></li>
                 </slide>
                 <slide>
-                    <li><img src="../../../assets/img/shop-image/2.jpg" alt="img"></li>
+                    <li><img :src=src alt="img"></li>
                 </slide>
                 <slide>
-                    <li><img src="../../../assets/img/shop-image/3.jpg" alt="img"></li>
+                    <li><img :src=src alt="img"></li>
                 </slide>
                 <slide>
-                    <li><img src="../../../assets/img/shop-image/4.jpg" alt="img"></li>
+                    <li><img :src=src alt="img"></li>
                 </slide>
                 <slide>
-                    <li><img src="../../../assets/img/shop-image/5.jpg" alt="img"></li>
+                    <li><img :src=src alt="img"></li>
                 </slide>
             </carousel>
         </ul>
@@ -32,6 +32,7 @@
 <script>
 import { Carousel, Slide } from 'vue-carousel';
 export default {
+      props: ['src'],
     name: 'DetailsImage',
     components: { Carousel, Slide }
 }

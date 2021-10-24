@@ -47,7 +47,9 @@ export default {
   },
   computed: {
     products() {
-      return this.$store.state.items;
+      let item =this.$store.state.items;
+      return item.slice(0,8);
+  
     },
   },
 };
