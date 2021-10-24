@@ -57,6 +57,66 @@ export default new Vuex.Store({
                 price: 129.00,  
                 image: require('../assets/snmleathers/8.jpeg')
             },
+            { 
+                id: 9, 
+                name: 'Wood Pencil', 
+                price: 191.00,  
+                image: require('../assets/snmleathers/1.jpeg')
+            },
+            { 
+                id: 10, 
+                name: 'T-Shirt', 
+                price: 191.00,  
+                image: require('../assets/snmleathers/2.jpeg')
+            },
+            { 
+                id: 11, 
+                name: 'T-Shirt', 
+                price: 191.00,  
+                image: require('../assets/snmleathers/2.jpeg')
+            },
+            { 
+                id: 12, 
+                name: 'T-Shirt', 
+                price: 191.00,  
+                image: require('../assets/snmleathers/2.jpeg')
+            },
+            { 
+                id: 13, 
+                name: 'Casual Shoe', 
+                price: 100.00,  
+                image: require('../assets/snmleathers/3.jpeg')
+            },
+            { 
+                id: 14, 
+                name: 'Coffee Bag', 
+                price: 150.00,  
+                image: require('../assets/snmleathers/4.jpeg')
+            },
+            { 
+                id: 15, 
+                name: 'Single Chair', 
+                price: 131.00,  
+                image: require('../assets/snmleathers/5.jpeg')
+            },
+            { 
+                id: 16, 
+                name: 'Business Card', 
+                price: 35.00,  
+                image: require('../assets/snmleathers/6.jpeg')
+            },
+            { 
+                id: 17, 
+                name: 'Book Cover', 
+                price: 500.00,  
+                image: require('../assets/snmleathers/7.jpeg')
+            },
+            { 
+                id: 18, 
+                name: 'Wall Watch', 
+                price: 129.00,  
+                image: require('../assets/snmleathers/8.jpeg')
+            },
         ],
         cart: []
     },

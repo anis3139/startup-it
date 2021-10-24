@@ -65,7 +65,7 @@
             <div class="contact-cta-box">
                 <h3>Have any question about us?</h3>
                 <p>Don't hesitate to contact us</p>
-                <a href="#" class="btn btn-primary">Contact Us</a>
+                <router-link to="/contact" class="btn btn-primary">Contact Us</router-link>
             </div>
 
             <div class="map-bg">
