@@ -51,7 +51,7 @@
           <div class="col-lg-6 col-md-12">
             <div class="about-content">
               <div class="section-title">
-                <h2>Lorem ipsum dolor sit amet. </h2>
+                <h2>About us </h2>
                 <div class="bar"></div>
               </div>
 
@@ -71,22 +71,22 @@
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="about-text">
-                <h3>lorem ipsum</h3>
+                <h3>Our Vision</h3>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, expedita! Possimus autem praesentium provident distinctio.</p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="about-text">
-                <h3>lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse hic doloremque ducimus necessitatibus nihil iste, architecto dignissimos eveniet facilis pariatur corporis consequatur unde aspernatur maiores quae voluptas nulla quod!</p>
+                <h3>Our Mission</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis esse hic doloremque ducimus necessitatibus nihil iste, architecto </p>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
               <div class="about-text">
-                <h3>lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus debitis obcaecati, perspiciatis magni consequuntur minima tempore provident soluta amet assumenda exercitationem quo fuga possimus! Voluptatem pariatur laudantium tenetur placeat!</p>
+                <h3>Our Goal</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit necessitatibus debitis obcaecati, perspiciatis magni consequuntur  </p>
               </div>
             </div>
           </div>

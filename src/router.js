@@ -38,7 +38,7 @@ export const router = new VueRouter({
     },
     routes: [
       { path: '/', component: ITStartup },
-      { path: '/about-style-one', component: AboutStyleOne },
+      { path: '/about-us',  name: 'about-us', component: AboutStyleOne },
       { path: '/features', component: Features },
       { path: '/feature-details', component: FeatureDetails },
       { path: '/service-style-one', component: ServicesOne },
@@ -62,7 +62,7 @@ export const router = new VueRouter({
       { path: '/shop', component: Shop , name: 'shop',},
       { path: '/cart', component: Cart },
       { path: '/checkout', component: Checkout },
-      { path: '/details', component: ItemDetails },
+      { path: '/details/:id',  name: 'product-details', component: ItemDetails },
       { path: '/privacy-policy', component: privacyPolicy },
       { path: '/version-log', component: VersionLog },
     ]

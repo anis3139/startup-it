@@ -13,7 +13,10 @@
 
             <div class="products-content">
                 <h3>
-                    <router-link to="/details">{{item.name}}</router-link>
+                    <router-link :to="{
+                      name: 'product-details',
+                      params: { id: item.id },
+                    }" >{{item.name}}</router-link>
                 </h3>
                 <!-- <span>${{item.price}}</span> -->
                 <!-- <ul>

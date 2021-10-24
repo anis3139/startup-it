@@ -20,7 +20,7 @@
                             </li>
 
                             <li class="nav-item">
-                                    <router-link to="/about-style-one" class="nav-link">About us </router-link>
+                                    <router-link :to="{  name: 'about-us'}" class="nav-link">About us </router-link>
                             </li>
 
                            
@@ -49,30 +49,30 @@
 
 <script>
 export default {
-    name: 'Header',
-    data(){
-        return {
-            isSticky: false
-        }
-    },
+  name: "Header",
+  data() {
+    return {
+      isSticky: false,
+    };
+  },
 
-    mounted() {
-        const that = this;
-        window.addEventListener('scroll', () => {
-            let scrollPos = window.scrollY;
-            // eslint-disable-next-line no-console
-            if(scrollPos >= 100){
-                that.isSticky = true;
-            } else {
-                that.isSticky = false;
-            }
-        })
-    },
+  mounted() {
+    const that = this;
+    window.addEventListener("scroll", () => {
+      let scrollPos = window.scrollY;
+      // eslint-disable-next-line no-console
+      if (scrollPos >= 100) {
+        that.isSticky = true;
+      } else {
+        that.isSticky = false;
+      }
+    });
+  },
 
-    computed: {
-        shoppingCart(){
-            return this.$store.state.cart;
-        }
-    }
-}
+  computed: {
+    shoppingCart() {
+      return this.$store.state.cart;
+    },
+  },
+};
 </script>
